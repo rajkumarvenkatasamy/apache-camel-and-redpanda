@@ -11,9 +11,7 @@ rpk topic create $TOPIC-DLT
 USER_ID=1
 
 # Infinite loop to produce data
-while true ; do
-    echo $USER_ID
-    
+while true ; do   
     JSON_STRING="{"\"user_id"\": $USER_ID, "\"user_name"\": "\"user_$USER_ID"\"}"
     # Send the message
     echo ${JSON_STRING} | rpk topic produce $TOPIC
