@@ -16,7 +16,7 @@ while true ; do
     # Send the message
     echo ${JSON_STRING} | rpk topic produce $TOPIC
 
-    sleep 8
+    sleep 5
     # Increment the USER_ID
     USER_ID=$(($USER_ID+1))
 done
