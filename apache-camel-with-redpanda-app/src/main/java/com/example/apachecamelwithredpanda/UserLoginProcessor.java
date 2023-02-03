@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class UserLoginProcessor {
-    public static void process(String body) throws BlacklistedUserPatternException {
+    public static void process(String body) throws Denylist {
         ObjectMapper mapper = new ObjectMapper();
         UserLogin userLogin = null;
         try {
@@ -19,7 +19,7 @@ public class UserLoginProcessor {
         }
 
         if (userLogin.getUser_name().contains("9") || userLogin.getUser_name().contains("4")) {
-            throw new BlacklistedUserPatternException("Encountered User name containing blacklisted pattern");
+            throw new Denylist("Encountered User name containing blacklisted pattern");
         }
 
         System.out.println("userLogin details are : " + userLogin);
