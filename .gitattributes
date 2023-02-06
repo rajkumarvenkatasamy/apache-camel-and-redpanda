@@ -1,1 +1,1 @@
-redpanda\custom-scripts\produce-events.sh eol=lf
+redpanda/custom-scripts/produce-events.sh eol=lf
