@@ -19,7 +19,7 @@ public class UserLoginProcessor {
         }
 
         if (userLogin.getUser_name().contains("9") || userLogin.getUser_name().contains("4")) {
-            throw new Denylist("Encountered User name containing blacklisted pattern");
+            throw new Denylist("Encountered User name containing denylisted pattern");
         }
 
         System.out.println("userLogin details are : " + userLogin);
